@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
       case REQUEST_CODE_SIGN_IN:
         Log.i(TAG, "Sign in request code");
         // Called after user is signed in.
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
           Log.i(TAG, "Signed in successfully.");
           // Use the last signed in account here since it already have a Drive scope.
           mDriveClient = Drive.getDriveClient(this, GoogleSignIn.getLastSignedInAccount(this));
@@ -175,7 +175,7 @@ public class MainActivity extends Activity {
       case REQUEST_CODE_CREATOR:
         Log.i(TAG, "creator request code");
         // Called after a file is saved to Drive.
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
           Log.i(TAG, "Image successfully saved.");
           mBitmapToSave = null;
           // Just start the camera again for another photo.
